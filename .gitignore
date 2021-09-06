@@ -1,0 +1,13 @@
+# local .history files in VS Code
+.history
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+.idea
+celerybeat-schedule.db
+celerybeat.pid
+dump.rdb
+db.sqlite3
+settings/local.py
