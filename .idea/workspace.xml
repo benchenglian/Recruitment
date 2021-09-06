@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="415accdf-36fa-43af-81a5-54a4251b166f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="recruitment">
+      <favorite_root url="file://$PROJECT_DIR$/jobs" module="recruitment" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/jobs/apps.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/jobs/urls.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/jobs/admin.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/jobs/tests.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/jobs/views.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/jobs/models.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/jobs/templates" module="recruitment" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/jobs/templates/job.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/jobs/templates/base.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/jobs/templates/joblist.html" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/jobs/migrations" module="recruitment" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/jobs/migrations/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/jobs/migrations/0001_initial.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/jobs/migrations/0002_auto_20210505_0751.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/jobs/__init__.py" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      </favorite_root>
+    </favorites_list>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1s4jOFv7t60quiySXOoNMxU8bXZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/job/templates" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="recruitment" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="recruitment" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/job/templates" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/settings" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="415accdf-36fa-43af-81a5-54a4251b166f" name="Default Changelist" comment="" />
+      <created>1620138721070</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620138721070</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="642" y="290" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630485193138">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="642" y="290" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1630485193138" />
+    <state x="2296" y="363" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.831/1440.23.1920.1057@1440.23.1920.1057" timestamp="1629973963256" />
+    <state x="220" y="82" key="SettingsEditor" timestamp="1630580181753">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="220" y="79" key="SettingsEditor/0.23.1440.829/1440.23.1920.1057@0.23.1440.829" timestamp="1626231242131" />
+    <state x="220" y="79" key="SettingsEditor/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1626231573559" />
+    <state x="220" y="82" key="SettingsEditor/0.23.1440.877/1440.23.1920.1011@0.23.1440.877" timestamp="1630580181753" />
+    <state x="283" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1629970614499">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="283" y="239" key="com.intellij.ide.util.TipDialog/0.23.1440.829/1440.23.1920.1057@0.23.1440.829" timestamp="1626231148744" />
+    <state x="283" y="239" key="com.intellij.ide.util.TipDialog/0.23.1440.830/1440.23.1920.1057@0.23.1440.830" timestamp="1626231502536" />
+    <state x="283" y="239" key="com.intellij.ide.util.TipDialog/0.23.1440.831/1440.23.1920.1057@0.23.1440.831" timestamp="1629970614499" />
+    <state x="330" y="278" key="com.intellij.ide.util.TipDialog/0.23.1680.979@0.23.1680.979" timestamp="1626881712711" />
+  </component>
+</project>

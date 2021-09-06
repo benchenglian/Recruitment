@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-01 16:27+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Translators: 职位实体的翻译
+#: job/models.py:23
+msgid "职位类别"
+msgstr ""
+
+#: job/models.py:24
+msgid "职位名称"
+msgstr ""
+
+#: job/models.py:25
+msgid "工作地点"
+msgstr ""
+
+#: job/models.py:26
+msgid "职位职责"
+msgstr ""
+
+#: job/models.py:27
+msgid "职位要求"
+msgstr ""
+
+#: job/models.py:28
+msgid "创建人"
+msgstr ""
+
+#: job/models.py:29 job/models.py:85
+msgid "创建日期"
+msgstr ""
+
+#: job/models.py:30 job/models.py:86
+msgid "修改日期"
+msgstr ""
+
+#: job/models.py:59
+msgid "职位"
+msgstr ""
+
+#: job/models.py:60 job/templates/base.html:21
+msgid "职位列表"
+msgstr ""
+
+#. Translators: 简历实体的翻译
+#: job/models.py:68
+msgid "姓名"
+msgstr ""
+
+#: job/models.py:69
+msgid "申请人"
+msgstr ""
+
+#: job/models.py:70
+msgid "城市"
+msgstr ""
+
+#: job/models.py:71
+msgid "手机号码"
+msgstr ""
+
+#: job/models.py:72
+msgid "邮箱"
+msgstr ""
+
+#: job/models.py:73
+msgid "应聘职位"
+msgstr ""
+
+#: job/models.py:74
+msgid "生源地"
+msgstr ""
+
+#: job/models.py:75
+msgid "性别"
+msgstr ""
+
+#: job/models.py:76
+msgid "个人照片"
+msgstr ""
+
+#: job/models.py:77
+msgid "简历附件"
+msgstr ""
+
+#: job/models.py:80
+msgid "本科学校"
+msgstr ""
+
+#: job/models.py:81
+msgid "研究生学校"
+msgstr ""
+
+#: job/models.py:82
+msgid "博士生学校"
+msgstr ""
+
+#: job/models.py:83
+msgid "专业"
+msgstr ""
+
+#: job/models.py:84
+msgid "学历"
+msgstr ""
+
+#: job/models.py:89
+msgid "自我介绍"
+msgstr ""
+
+#: job/models.py:90
+msgid "工作经历"
+msgstr ""
+
+#: job/models.py:91
+msgid "项目经历"
+msgstr ""
+
+#: job/models.py:94
+msgid "简历"
+msgstr ""
+
+#: job/models.py:95
+msgid "简历列表"
+msgstr ""
+
+#: job/templates/base.html:14
+msgid "Inmobi招聘"
+msgstr "Inmobi秋季招聘"
+
+#: job/templates/base.html:20
+msgid "首页"
+msgstr ""
+
+#: job/templates/base.html:24
+msgid "退出"
+msgstr ""
+
+#: job/templates/base.html:26
+msgid "登录"
+msgstr ""
+
+#: job/templates/base.html:30
+#, python-format
+msgid " 终于等到你 %(user.username)s,期待加入我们，用技术去探索一个新世界 "
+msgstr ""
+
+#: job/templates/base.html:32
+msgid "欢迎你,期待加入我们登录后可以提交简历."
+msgstr ""
+
+#: recruitment/urls.py:30
+msgid "Inmobi招聘管理系统"
+msgstr ""
