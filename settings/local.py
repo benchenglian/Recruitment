@@ -1,20 +1,10 @@
 '''
- ┌───┐   ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐ ┌───┬───┬───┐
- │Esc│   │ F1│ F2│ F3│ F4│ │ F5│ F6│ F7│ F8│ │ F9│F10│F11│F12│ │P/S│S L│P/B│  ┌┐    ┌┐    ┌┐
- └───┘   └───┴───┴───┴───┘ └───┴───┴───┴───┘ └───┴───┴───┴───┘ └───┴───┴───┘  └┘    └┘    └┘
- ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐ ┌───┬───┬───┐ ┌───┬───┬───┬───┐
- │~ `│! 1│@ 2│# 3│$ 4│% 5│^ 6│& 7│* 8│( 9│) 0│_ -│+ =│ BacSp │ │Ins│Hom│PUp│ │N L│ / │ * │ - │
- ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤ ├───┼───┼───┤ ├───┼───┼───┼───┤
- │ Tab │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │{ [│} ]│ | \ │ │Del│End│PDn│ │ 7 │ 8 │ 9 │   │
- ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤ └───┴───┴───┘ ├───┼───┼───┤ + │
- │ Caps │ A │ S │ D │ F │ G │ H │ J │ K │ L │: ;│" '│ Enter  │               │ 4 │ 5 │ 6 │   │
- ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤     ┌───┐     ├───┼───┼───┼───┤
- │ Shift  │ Z │ X │ C │ V │ B │ N │ M │< ,│> .│? /│  Shift   │     │ ↑ │     │ 1 │ 2 │ 3 │   │
- ├─────┬──┴─┬─┴──┬┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤ ┌───┼───┼───┐ ├───┴───┼───┤ E││
- │ Ctrl│    │Alt │         Space         │ Alt│    │    │Ctrl│ │ ← │ ↓ │ → │ │   0   │ . │←─┘│
- └─────┴────┴────┴───────────────────────┴────┴────┴────┴────┘ └───┴───┴───┘ └───────┴───┴───┘
+Autor: Frank.Lian
+Description: 
+Date: 2021-05-10 19:20:17
+LastEditTime: 2021-09-09 10:08:49
+FilePath: /recruitment/settings/local.py
 '''
-
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
@@ -22,6 +12,30 @@ from .base import *
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",
+        "TIMEOUT": 300,
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            #"PASSWORD": "mysecret",
+            "SOCKET_CONNECT_TIMEOUT": 5, # in seconds
+            "SOCKET_TIMEOUT":5, # r/w timeout in seconds 
+        }
+    }
+}
+
+# Celery application definition
+CELERY_BROKER_URL = "redis://localhost:6379/0" #消息代理
+CELERY_RESULT_BAKEND = "redis://localhost:6379/1" # 运行结果
+CELERY_ACCETP_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_TIMEZONE = "Asia/Shanghai"
+CELERY_MAX_TASKS_PER_CHILD = 10
+CELERY_LOG_FILE = os.path.join(BASE_DIR,"logs","celery_work.log")
+CELERYBEAT_LOG_FILE = os.path.join(BASE_DIR,"logs","celery_beat.log")
 
 LDAP_AUTH_CONNECTION_USERNAME = "CN=admin,DC=ihopeit,DC=com"
 LDAP_AUTH_CONNECTION_PASSWORD = "admin_passwd_4_ldap"

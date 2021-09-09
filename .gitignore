@@ -1,7 +1,15 @@
+
+
+# Translations
+*.mo
+
 # local .history files in VS Code
 .history
 
 # Mr Developer
+*.pyc
+settings/__pycache__/base.cpython-38.pyc
+settings/__pycache__/local.cpython-38.pyc
 .mr.developer.cfg
 .project
 .pydevproject

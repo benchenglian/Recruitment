@@ -54,9 +54,17 @@ INSTALLED_APPS = [
     'django_python3_ldap',
     'job',
     'interview',
-    'bootstrap4'
+    'bootstrap4',
+    'rest_framework'
 ]
 
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 MIDDLEWARE = [
     #'interview.performance.performance_logger_middleware', # 自定义中间件，函数实现，记录耗时。
@@ -64,7 +72,9 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware', # 安全，常用安全拦截，比如设置XSS防御的请求头，比如做了http协议转为https协议的工作等。
     'django.contrib.sessions.middleware.SessionMiddleware',# 处理用户登录信息。
     'django.middleware.locale.LocaleMiddleware', # 多语言支持
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',# 常用处理
+    'django.middleware.cache.FetchFromCacheMiddleware',#视图访问每个页面，优先缓存取数据，更新缓存数据。
     'django.middleware.csrf.CsrfViewMiddleware',# 处理跨站攻击，CSRF保护的中间件
     'django.contrib.auth.middleware.AuthenticationMiddleware',# 处理用户认证登录，会给request添加一个user对象的中间件
     'django.contrib.messages.middleware.MessageMiddleware',# 处理消息

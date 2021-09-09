@@ -1,3 +1,11 @@
+'''
+Autor: Frank.Lian
+Description: 
+Date: 2021-05-05 10:53:00
+LastEditTime: 2021-09-07 16:07:12
+FilePath: /recruitment/job/views.py
+Author: ic1129-x0
+'''
 # Create your views here.
 from django.contrib import messages
 from django.shortcuts import render
@@ -10,6 +18,8 @@ from job.models import Cities,JobTypes
 from django.contrib.auth.mixins import LoginRequiredMixin # 一个类继承多个类
 from django.views.generic.edit import CreateView
 from django.contrib.auth.decorators import permission_required
+import logging
+Logger = logging.getLogger(__name__)
 
 def joblist(request):
     job_list = Job.objects.order_by('job_type')
@@ -27,6 +37,7 @@ def detail(request,job_id):
     try:
         job = Job.objects.get(pk=job_id)
         job.city_name = Cities[job.job_city][1]
+        Logger.info('job info fetched from datebase jobid:%s' % job_id)
     except Job.DoesNotExist:
         raise Http404("Job does not exist")
 
@@ -95,5 +106,3 @@ class ResumeDetailView(DetailView):
     """   简历详情页    """
     model = Resume
     template_name = 'resume_detail.html'
-
-
