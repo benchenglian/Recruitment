@@ -43,6 +43,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_celery_beat',
     'simpleui',
     'registration',
     'django.contrib.admin',
@@ -55,7 +56,9 @@ INSTALLED_APPS = [
     'job',
     'interview',
     'bootstrap4',
-    'rest_framework'
+    'rest_framework',
+    'django_oss_storage',
+    'running',
 ]
 
 REST_FRAMEWORK = {
@@ -133,6 +136,26 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        #'ENGINE': 'django_prometheus.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'running': {
+            'ENGINE': 'django.db.backends.mysql', 
+            'NAME': 'running',                    
+            'USER': 'root',                      
+            'PASSWORD': '123456',                  
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+    },
+}
+
+DATABASE_ROUTERS = ['settings.router.DatabaseRouter']
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -217,6 +240,10 @@ LOGGING = {
         },
     },
 }
+
+
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
+MEDIA_URL = '/media/'
 
 
 ### LDAP

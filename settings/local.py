@@ -2,7 +2,7 @@
 Autor: Frank.Lian
 Description: 
 Date: 2021-05-10 19:20:17
-LastEditTime: 2021-09-09 10:08:49
+LastEditTime: 2021-09-10 19:03:36
 FilePath: /recruitment/settings/local.py
 '''
 import sentry_sdk
@@ -60,3 +60,15 @@ sentry_sdk.init(
     # django.contrib.auth) you may enable sending PII data.
     send_default_pii=True # 是否发送个人标识信息。
 )
+# STATICFILES_STORAGE = 'django_oss_storage.backends.OssStaticStorage'
+DEFAULT_FILE_STORAGE = 'django_oss_storage.backends.OssMediaStorage'
+
+# AliCloud access key ID
+OSS_ACCESS_KEY_ID = 'LTAI5t7pB3CnmuBCBbBm3CCW'#os.environ.get('OSS_ACCESS_KEY_ID','LTAI5t7NfMKTn5GMNjtMDhM8')
+# AliCloud access key secret
+OSS_ACCESS_KEY_SECRET = 'Y1ESntHa9QceY8NubkhStMFmGk84Ix'#os.environ.get('OSS_ACCESS_KEY_SECRET','nmjdS3YHlx1fVGrbmP0Lpwo7VlKYKx')
+# The name of the bucket to store files in
+OSS_BUCKET_NAME = 'recruitment-001'
+# The URL of AliCloud OSS endpoint
+# Refer https://www.alibabacloud.com/help/zh/doc-detail/31837.htm for OSS Region & Endpoint
+OSS_ENDPOINT = 'oss-cn-beijing.aliyuncs.com'
