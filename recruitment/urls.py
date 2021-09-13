@@ -1,8 +1,8 @@
 '''
-Autor: Frank.Lian
+Author: Frank.Lian
 Description: 
 Date: 2021-05-04 22:29:01
-LastEditTime: 2021-09-06 16:49:54
+LastEditTime: 2021-09-10 16:51:33
 FilePath: /recruitment/recruitment/urls.py
 '''
 """recruitment URL Configuration
@@ -69,6 +69,11 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('accounts/', include('registration.backends.simple.urls')),
 ]
+
+from django.conf.urls.static import static
+from django.conf import settings
+
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 
 admin.site.site_header = _('Inmobi招聘管理系统')

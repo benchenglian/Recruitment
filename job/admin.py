@@ -1,3 +1,10 @@
+'''
+Author: Frank.Lian
+Description: 
+Date: 2021-05-05 10:53:00
+LastEditTime: 2021-09-10 17:15:02
+FilePath: /recruitment/job/admin.py
+'''
 from datetime import datetime
 
 from django.contrib import admin, messages
@@ -5,7 +12,7 @@ from django.contrib import admin, messages
 # Register your models here.
 from interview.models import Candidate
 from job.models import Job, Resume
-
+from django.utils.html import format_html
 
 class JobAdmin(admin.ModelAdmin):
 
@@ -34,15 +41,15 @@ enter_interview_process.short_description = u"进入面试流程"
 class ResumeAdmin(admin.ModelAdmin):
 
     actions = (enter_interview_process,)
-    #
-    # def image_tag(self, obj):
-    #     if obj.picture:
-    #         return format_html('<img src="{}" style="width:100px;height:80px;"/>'.format(obj.picture.url))
-    #     return ""
-    # image_tag.allow_tags = True
-    # image_tag.short_description = 'Image'
+    
+    def image_tag(self, obj):
+        if obj.picture:# url做格式化，用html标签封起来
+            return format_html('<img src="{}" style="width:100px;height:80px;"/>'.format(obj.picture.url))
+        return ""
+    image_tag.allow_tags = True
+    image_tag.short_description = 'Image'
 
-    list_display = ('username', 'applicant', 'city', 'apply_position', 'bachelor_school', 'master_school', 'major','created_date')
+    list_display = ('username', 'applicant', 'city', 'apply_position', 'bachelor_school', 'master_school','image_tag', 'major','created_date')
 
     readonly_fields = ('applicant', 'created_date', 'modified_date',) # 只读字段
 

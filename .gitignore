@@ -1,4 +1,4 @@
-
+.vscode/
 
 # Translations
 *.mo
@@ -7,7 +7,7 @@
 .history
 
 # Mr Developer
-*.pyc
+*.pyc 
 settings/__pycache__/base.cpython-38.pyc
 settings/__pycache__/local.cpython-38.pyc
 .mr.developer.cfg
